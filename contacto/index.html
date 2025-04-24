@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta con La Cadena. Estamos aquí para atender tus dudas y necesidades.">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <title>La Cadena • Contacto</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contacto.css">
     <script src="../navbar/navbar.js"></script>
 </head>
 
@@ -13,9 +16,77 @@
     <nav-bar></nav-bar>
 
     <main>
-        <h1>Contacto</h1>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Contacto</h1>
+            </div>
+        </section>
+        
+        <div class="contact-container">
+            <section class="contact-info">
+                <div class="contact-heading">
+                    <h3>¿Necesitas ayuda?<br>Estamos aquí para ti.</h3>
+                </div>
+
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <h3>Teléfono</h3>
+                        <p><a href="tel:+522222324879">(222) 232 4879</a></p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h3>WhatsApp</h3>
+                        <p><a href="https://wa.me/522222324879">(222) 232 4879</a></p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h3>Correo</h3>
+                        <p><a href="mailto:lacadenaeduardoz@yahoo.com.mx">lacadenaeduardoz@yahoo.com.mx</a></p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h3>Dirección</h3>
+                        <p>Calle 3 Nte 803, Centro histórico de Puebla, 72000 Puebla, Pue.</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h3>Horario de Atención</h3>
+                        <p>Lunes a Viernes: 9:00 AM - 7:00 PM<br>
+                           Sábados: 9:00 AM - 2:00 PM</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-form">
+                <form id="contactForm" action="#" method="POST">
+                    <div class="form-group">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-contact">Contactar</button>
+                </form>
+            </section>
+        </div>
     </main>
 
+    <footer>
+        <div class="contact-info">
+            <p>Encuéntranos en:</p>
+            <address>
+                Calle 3 Nte 803, Centro histórico de Puebla, 72000 Puebla, Pue.<br>
+                Tel: (222) 232 4879<br>
+                Email: lacadenaeduardoz@yahoo.com.mx
+            </address>
+        </div>
+    </footer>
 </body>
 
 </html>

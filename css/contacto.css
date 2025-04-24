@@ -1,0 +1,123 @@
+/* Estilos específicos para la página de contacto */
+
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+.hero {
+    height: 30vh;
+    padding-bottom: 5vh;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    gap: 60px;
+    background-color: var(--snow-white);
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+}
+
+.contact-info {
+    width: 1fr;
+    height: fit-content;
+    align-self: center;
+    justify-self: left;
+    flex: 1;
+    gap: 60px;
+}
+
+.contact-heading {
+    margin-bottom: 3rem;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    margin-bottom: 0.5rem;
+}
+
+.contact-item h3 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--charcoal);
+    margin-bottom: 0.25rem;
+    opacity: 0.8;
+}
+
+.contact-item p, 
+.contact-item a {
+    font-size: 1rem;
+    color: var(--smoky-black);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    line-height: 1.6;
+}
+
+.contact-item a:hover {
+    color: var(--rojo);
+}
+
+/* Formulario */
+.contact-form {
+    flex: 1;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    background-color: #F8F9FA;
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--rojo);
+    box-shadow: 0 0 0 2px rgba(235, 71, 61, 0.1);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+button.btn-contact {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--rojo);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    opacity: 0.9;
+}
+
+button.btn-contact:hover {
+    background-color: var(--rojo);
+    opacity: 1;
+    transform: translateY(-1px);
+}

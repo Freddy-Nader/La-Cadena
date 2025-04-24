@@ -13,8 +13,11 @@
     --black-olive: #3B413C;
 }
 
-body {
+* {
     font-family: 'Lato', sans-serif;
+}
+
+body {
     background-color: var(--snow-white);
     color: var(--charcoal);
     margin: 0;
@@ -23,18 +26,26 @@ body {
 }
 
 h1 {
-    font-family: 'Canela Deck Medium', sans-serif;
-    /* font-family: 'Canela Regular', 'Miller', 'Times New Roman', Times, 'Bodoni Moda', serif; */
-    font-size: 2.5em;
+    font-size: 60px;
     margin: 0;
-    /* font-weight: 600; */
+    color: var(--charcoal);
+    line-height: 1;
+    font-weight: 500;
 }
 
-h2 {
-    font-family: 'Canela Deck Light', 'Miller', 'Times New Roman', Times, 'Bodoni Moda', serif;
-    font-size: 1.7em;
+h2 {font-size: 48px;
     margin: 0;
-    font-weight: 400;
+    color: var(--charcoal);
+    line-height: 1;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 36px;
+    margin: 0;
+    color: var(--charcoal);
+    line-height: 1;
+    font-weight: 500;
 }
 
 /*------*/
@@ -57,21 +68,3 @@ h2 {
     align-items: center;
     align-self: center;
 }
-
-/* .hero div {
-    width: 100%;
-    max-width: 70%;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-} */
-
-.hero em {
-    color: var(--naranja-quemado);
-    font-family: 'Canela Text Light Italic', 'Canela Deck Light', 'Miller', 'Times New Roman', Times, 'Bodoni Moda', serif;;
-}
-
-
-
