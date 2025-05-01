@@ -1,9 +1,9 @@
-// Función para cargar el CSS
-async function loadNavbarCSS() {
+// Función para cargar el CSS del navbar y del footer
+async function loadCSS() {
     try {
         // Determinar si estamos en la página principal o en un subdirectorio
         const isRoot = window.location.pathname.split('/').filter(Boolean).length <= 1;
-        const cssPath = isRoot ? 'navbar/navbar.css' : '../navbar/navbar.css';
+        const cssPath = isRoot ? 'static/components/components.css' : '../static/components/components.css';
         
         const response = await fetch(cssPath);
         const css = await response.text();
@@ -20,21 +20,21 @@ async function loadNavbarCSS() {
             document.head.appendChild(style);
         }
     } catch (error) {
-        console.error('Error loading navbar CSS:', error);
+        console.error('Error loading CSS of components (navbar & footer):', error);
     }
 }
 
 // Cargar el CSS cuando se carga el script
-loadNavbarCSS();
+loadCSS();
 
-// Definir la clase del componente
+// Definir la clase del componente del navbar
 class NavBar extends HTMLElement {
     constructor() {
         super();
         const isRoot = window.location.pathname.split('/').filter(Boolean).length <= 1;
         const path = isRoot ? '' : '../';
         
-        fetch(`${path}navbar/navbar.html`)
+        fetch(`${path}static/components/navbar.html`)
             .then(response => response.text())
             .then(html => {
                 this.innerHTML = html.replace(/\${path}/g, path);
@@ -43,5 +43,22 @@ class NavBar extends HTMLElement {
     }
 }
 
-// Registrar el componente
-customElements.define('nav-bar', NavBar);
+// Definir la clase del componente del footer
+class Footer extends HTMLElement {
+    constructor() {
+        super();
+        const isRoot = window.location.pathname.split('/').filter(Boolean).length <= 1;
+        const path = isRoot ? '' : '../';
+        
+        fetch(`${path}static/components/footer.html`)
+            .then(response => response.text())
+            .then(html => {
+                this.innerHTML = html.replace(/\${path}/g, path);
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    }
+}
+
+// Registrar los componentes
+customElements.define('load-navbar', NavBar);
+customElements.define('load-footer', Footer);
