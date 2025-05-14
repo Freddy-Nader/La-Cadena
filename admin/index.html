@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - La Cadena</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="../static/components/components.js"></script>
+</head>
+<body>
+    <load-navbar></load-navbar>
+    <main class="admin-panel">
+        <section class="hero">
+            <h1>Panel de Administración</h1>
+            <p>Gestiona los datos de la tienda y ejecuta consultas SQL.</p>
+        </section>
+        <section class="admin-actions">
+            <nav class="admin-nav">
+                <button onclick="showSection('productos')">Productos</button>
+                <button onclick="showSection('usuarios')">Usuarios</button>
+                <button onclick="showSection('carrito')">Carritos</button>
+                <button onclick="showSection('historial')">Historial</button>
+                <button onclick="showSection('sql')">SQL Directo</button>
+            </nav>
+            <div id="admin-content">
+                <!-- Aquí se cargará dinámicamente el contenido de cada sección -->
+            </div>
+        </section>
+    </main>
+    <load-footer></load-footer>
+    <script src="admin.js"></script>
+</body>
+</html> 

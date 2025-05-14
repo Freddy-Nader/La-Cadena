@@ -16,42 +16,40 @@
 
     <main class="contacto">
         <section class="hero">
-            <div class="hero-content">
-                <h1>Contacto</h1>
-            </div>
+            <h1>Contacto</h1>
         </section>
-        
+
         <div class="contact-container">
             <section class="contact-info">
                 <div class="contact-heading">
-                    <h3>¿Necesitas ayuda?<br>Estamos aquí para ti.</h3>
+                    <h3>¿Necesitas ayuda? Estamos aquí para ti.</h3>
                 </div>
 
                 <div class="contact-details">
                     <div class="contact-item">
-                        <h3>Teléfono</h3>
+                        <h5>Teléfono</h5>
                         <p><a href="tel:+522222324879">(222) 232 4879</a></p>
                     </div>
 
                     <div class="contact-item">
-                        <h3>WhatsApp</h3>
+                        <h5>WhatsApp</h5>
                         <p><a href="https://wa.me/522222324879">(222) 232 4879</a></p>
                     </div>
 
                     <div class="contact-item">
-                        <h3>Correo</h3>
+                        <h5>Correo</h5>
                         <p><a href="mailto:lacadenaeduardoz@yahoo.com.mx">lacadenaeduardoz@yahoo.com.mx</a></p>
                     </div>
 
                     <div class="contact-item">
-                        <h3>Dirección</h3>
-                        <p>Calle 3 Nte 803, Centro histórico de Puebla, 72000 Puebla, Pue.</p>
+                        <h5>Dirección</h5>
+                        <p><a href="https://maps.app.goo.gl/4YsWFv6ws6dbkUBTA">Calle 3 Nte 803, Centro histórico de
+                                Puebla, 72000 Puebla, Pue.</a></p>
                     </div>
 
                     <div class="contact-item">
-                        <h3>Horario de Atención</h3>
-                        <p>Lunes a Viernes: 9:00 AM - 7:00 PM<br>
-                           Sábados: 9:00 AM - 2:00 PM</p>
+                        <h5>Horario de Atención</h5>
+                        <p>Lunes a Sábado: 9:00 AM - 7:00 PM</p>
                     </div>
                 </div>
             </section>
@@ -78,5 +76,20 @@
 
     <load-footer></load-footer>
 </body>
+
+<!-- Hamburguesa -->
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.querySelector('nav');
+
+    if (hamburger && nav) {
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('open');
+            console.log("Hamburger clicked");
+        });
+    } else {
+        console.warn("hamburger or nav not found", hamburger, nav);
+    }
+</script>
 
 </html>
