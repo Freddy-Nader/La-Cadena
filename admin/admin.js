@@ -41,7 +41,7 @@ function renderTableSection(section, data) {
         });
         html += `<button type="submit">Agregar</button></form>`;
         // Tabla de datos
-        html += `<table class="admin-table"><thead><tr>`;
+        html += `<div class="admin-table-wrapper"><table class="admin-table"><thead><tr>`;
         data.columns.forEach(col => html += `<th>${col}</th>`);
         html += `<th>Acciones</th></tr></thead><tbody>`;
         data.rows.forEach(row => {
@@ -53,7 +53,7 @@ function renderTableSection(section, data) {
             </td>`;
             html += '</tr>';
         });
-        html += '</tbody></table>';
+        html += '</tbody></table></div>';
     } else {
         html += '<div>No hay datos.</div>';
     }
@@ -134,7 +134,6 @@ function renderSQLSection() {
             <button type="submit">Ejecutar</button>
         </form>
         <div id="sql-result"></div>
-        <div style="color:#b32a1c;font-size:0.95em;margin-top:10px;">⚠️ Usa esta función con precaución. No se recomienda en producción.</div>
     `;
 }
 
